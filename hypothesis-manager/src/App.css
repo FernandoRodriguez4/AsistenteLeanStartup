@@ -1,0 +1,654 @@
+/* Tipografía y estilos base mejorados */
+:root {
+  /* Paleta de colores principal */
+  --primary: #3a86ff;
+  --primary-light: #83b5ff;
+  --primary-dark: #1a66e0;
+  --secondary: #8338ec;
+  --secondary-light: #a173f1;
+  --secondary-dark: #6020b0;
+  --accent: #ff006e;
+  --success: #38b000;
+  --warning: #ffbe0b;
+  --danger: #ff5e5b;
+  --dark: #343a40;
+  --light: #f8f9fa;
+  --text: #212529;
+  --text-muted: #6c757d;
+  --text-light: #f8f9fa;
+  --border: #dee2e6;
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  line-height: 1.6;
+  color: var(--text);
+  background-color: var(--light);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 600;
+  line-height: 1.3;
+  margin-bottom: 1rem;
+  color: var(--text);
+}
+
+p {
+  margin-bottom: 1rem;
+}
+
+/* Mejorar legibilidad de texto */
+.text-muted {
+  color: var(--text-muted) !important;
+}
+
+/* Botones mejorados */
+.btn {
+  border-radius: 6px;
+  padding: 0.6rem 1.2rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  border: none;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.btn:active {
+  transform: scale(0.98);
+}
+
+.btn-primary {
+  background-image: linear-gradient(45deg, var(--primary), var(--primary-dark));
+  border-color: var(--primary);
+}
+
+.btn-secondary {
+  background-image: linear-gradient(45deg, var(--secondary), var(--secondary-dark));
+  border-color: var(--secondary);
+}
+
+.btn-success {
+  background-image: linear-gradient(45deg, var(--success), #2d9400);
+  border-color: var(--success);
+}
+
+.btn-danger {
+  background-image: linear-gradient(45deg, var(--danger), #d63230);
+  border-color: var(--danger);
+}
+
+.btn-outline-primary {
+  color: var(--primary);
+  border-color: var(--primary);
+  border-width: 1.5px;
+}
+
+.btn-outline-primary:hover {
+  background-color: var(--primary);
+  color: white;
+}
+
+/* Cards mejoradas */
+.card {
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden;
+}
+
+.card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.08);
+}
+
+.card-header {
+  background-color: white;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  padding: 1.25rem 1.5rem;
+  font-weight: 600;
+}
+
+.card-body {
+  padding: 1.5rem;
+}
+
+.card-footer {
+  background-color: white;
+  border-top: 1px solid rgba(0, 0, 0, 0.05);
+  padding: 1rem 1.5rem;
+}
+
+/* Formularios mejorados */
+.form-control {
+  border-radius: 6px;
+  padding: 0.75rem 1rem;
+  border: 1.5px solid var(--border);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.form-control:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 0.25rem rgba(58, 134, 255, 0.15);
+}
+
+.form-label {
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+
+/* Iconos consistentes */
+.icon {
+  vertical-align: -0.125em;
+}
+
+.icon-sm {
+  width: 16px;
+  height: 16px;
+}
+
+.icon-md {
+  width: 20px;
+  height: 20px;
+}
+
+.icon-lg {
+  width: 24px;
+  height: 24px;
+}
+
+.icon-primary {
+  color: var(--primary);
+}
+
+.icon-secondary {
+  color: var(--secondary);
+}
+
+.icon-success {
+  color: var(--success);
+}
+
+.icon-danger {
+  color: var(--danger);
+}
+
+/* Badges mejorados */
+.badge {
+  padding: 0.5em 0.8em;
+  font-weight: 600;
+  border-radius: 6px;
+  font-size: 0.75em;
+}
+
+.badge-primary {
+  background-color: var(--primary);
+}
+
+.badge-secondary {
+  background-color: var(--secondary);
+}
+
+/* Listas mejoradas */
+.list-item {
+  padding: 1rem;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  transition: background-color 0.2s ease;
+}
+
+.list-item:hover {
+  background-color: rgba(58, 134, 255, 0.03);
+}
+
+.list-item:last-child {
+  border-bottom: none;
+}
+
+/* Estados vacíos mejorados */
+.empty-state {
+  text-align: center;
+  padding: 3rem 2rem;
+  border-radius: 10px;
+  background-color: white;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.empty-state-icon {
+  font-size: 3rem;
+  color: var(--text-muted);
+  margin-bottom: 1.5rem;
+  opacity: 0.7;
+}
+
+.empty-state-title {
+  font-weight: 600;
+  font-size: 1.25rem;
+  margin-bottom: 0.75rem;
+}
+
+.empty-state-text {
+  color: var(--text-muted);
+  max-width: 80%;
+  margin: 0 auto 1.5rem auto;
+}
+
+/* Navbar mejorada */
+.navbar {
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  padding: 0.75rem 1.5rem;
+  background-image: linear-gradient(90deg, var(--primary), var(--primary-dark));
+}
+
+.navbar-brand {
+  font-weight: 700;
+  font-size: 1.3rem;
+  letter-spacing: -0.5px;
+}
+
+.nav-link {
+  font-weight: 500;
+  padding: 0.5rem 1rem !important;
+  transition: all 0.3s ease;
+  border-radius: 6px;
+}
+
+.nav-link:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.nav-link.active {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Alertas y mensajes */
+.alert {
+  border: none;
+  border-radius: 8px;
+  padding: 1rem 1.5rem;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.alert-success {
+  background-color: rgba(56, 176, 0, 0.1);
+  color: var(--success);
+}
+
+.alert-danger {
+  background-color: rgba(255, 94, 91, 0.1);
+  color: var(--danger);
+}
+
+.alert-warning {
+  background-color: rgba(255, 190, 11, 0.1);
+  color: var(--warning);
+}
+
+.alert-info {
+  background-color: rgba(58, 134, 255, 0.1);
+  color: var(--primary);
+}
+
+/* Animaciones y transiciones */
+.fade-in {
+  animation: fadeIn 0.5s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Mejoras para tablas */
+.table {
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.table thead th {
+  border-top: none;
+  font-weight: 600;
+  background-color: rgba(58, 134, 255, 0.05);
+}
+
+.table tbody tr {
+  transition: background-color 0.2s ease;
+}
+
+.table tbody tr:hover {
+  background-color: rgba(58, 134, 255, 0.03);
+}
+
+/* Contenedores con división fases del proceso */
+.phase-container {
+  border-radius: 10px;
+  border-left: 4px solid var(--primary);
+  padding: 1.25rem;
+  background-color: white;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  margin-bottom: 1.5rem;
+}
+
+.phase-container.build {
+  border-left-color: var(--primary);
+}
+
+.phase-container.measure {
+  border-left-color: var(--success);
+}
+
+.phase-container.learn {
+  border-left-color: var(--secondary);
+}
+
+.phase-container.pivot {
+  border-left-color: var(--warning);
+}
+
+.phase-container.iterate {
+  border-left-color: var(--danger);
+}
+
+/* Mejoras para elementos de navegación por pestañas */
+.nav-tabs .nav-link {
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px 8px 0 0;
+  font-weight: 500;
+  color: var(--text);
+}
+
+.nav-tabs .nav-link.active {
+  color: var(--primary);
+  border-bottom: 2px solid var(--primary);
+  background-color: transparent;
+}
+
+.nav-tabs .nav-link:hover:not(.active) {
+  background-color: rgba(58, 134, 255, 0.05);
+  border-color: transparent;
+}
+
+/* Mejoras para modales */
+.modal-content {
+  border-radius: 10px;
+  border: none;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.modal-header {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  padding: 1.5rem;
+}
+
+.modal-body {
+  padding: 1.5rem;
+}
+
+.modal-footer {
+  border-top: 1px solid rgba(0, 0, 0, 0.05);
+  padding: 1.5rem;
+}
+
+/* Media queries para responsividad */
+@media (max-width: 768px) {
+  .card {
+    margin-bottom: 1rem;
+  }
+  
+  .navbar-brand {
+    font-size: 1.1rem;
+  }
+  
+  .btn {
+    padding: 0.5rem 1rem;
+  }
+  
+  .empty-state {
+    padding: 2rem 1rem;
+  }
+}
+
+/* Estilos para las pestañas personalizadas */
+.nav-tabs-custom {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.nav-tabs-custom .nav-link {
+  border: none;
+  padding: 0.75rem 1.25rem;
+  border-radius: 8px 8px 0 0;
+  margin-right: 0.25rem;
+  color: var(--text-color);
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.nav-tabs-custom .nav-link:hover:not(.active) {
+  background-color: rgba(58, 134, 255, 0.05);
+  border-bottom: none;
+}
+
+.nav-tabs-custom .nav-link.active {
+  color: var(--primary-color);
+  border-bottom: 3px solid var(--primary-color);
+  background-color: transparent;
+}
+
+/* Estilos para las tarjetas de fase en la vista de hipótesis */
+.bg-light {
+  background-color: #f8f9fa;
+}
+
+.rounded-circle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+}
+
+
+.artifact-content {
+  font-family: 'Inter', -apple-system, sans-serif;
+  line-height: 1.7;
+  font-size: 16px;
+  color: #333;
+}
+
+.artifact-content h1 {
+  font-size: 24px;
+  font-weight: 700;
+  margin-top: 32px;
+  margin-bottom: 16px;
+  color: #222;
+}
+
+.artifact-content h2 {
+  font-size: 20px;
+  font-weight: 600;
+  margin-top: 28px;
+  margin-bottom: 14px;
+  color: #333;
+}
+
+.artifact-content h3 {
+  font-size: 18px;
+  font-weight: 600;
+  margin-top: 24px;
+  margin-bottom: 12px;
+  color: #444;
+}
+
+.artifact-content p {
+  margin-bottom: 16px;
+}
+
+.artifact-content ul, 
+.artifact-content ol {
+  margin-bottom: 16px;
+  padding-left: 24px;
+}
+
+.artifact-content li {
+  margin-bottom: 8px;
+}
+
+.artifact-content strong {
+  font-weight: 600;
+  color: #222;
+}
+
+
+/* Agregar estos estilos al final de tu App.css existente */
+
+/* ===== ESTILOS PARA MARKDOWN RENDERIZADO ===== */
+.markdown-rendered {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #333;
+}
+
+.markdown-rendered h1,
+.markdown-rendered h2,
+.markdown-rendered h3,
+.markdown-rendered h4,
+.markdown-rendered h5,
+.markdown-rendered h6 {
+  font-weight: 600;
+  line-height: 1.25;
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.markdown-rendered h1:first-child,
+.markdown-rendered h2:first-child,
+.markdown-rendered h3:first-child {
+  margin-top: 0;
+}
+
+.markdown-rendered ul,
+.markdown-rendered ol {
+  padding-left: 2rem;
+  margin-bottom: 1rem;
+}
+
+.markdown-rendered ul li {
+  list-style-type: disc;
+}
+
+.markdown-rendered ol li {
+  list-style-type: decimal;
+}
+
+.markdown-rendered li {
+  margin-bottom: 0.5rem;
+  line-height: 1.6;
+}
+
+.markdown-rendered blockquote {
+  font-style: italic;
+  opacity: 0.9;
+}
+
+.markdown-rendered pre {
+  background-color: #f8f9fa;
+  border: 1px solid #dee2e6;
+  border-radius: 0.375rem;
+  padding: 1rem;
+  overflow-x: auto;
+  margin-bottom: 1rem;
+}
+
+.markdown-rendered code {
+  font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+  font-size: 0.875em;
+}
+
+.markdown-rendered pre code {
+  background: none;
+  padding: 0;
+  border-radius: 0;
+  color: inherit;
+}
+
+.markdown-rendered table {
+  margin-bottom: 1rem;
+  width: 100%;
+}
+
+.markdown-rendered img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 1rem auto;
+}
+
+.markdown-rendered a {
+  color: #007bff;
+}
+
+.markdown-rendered a:hover {
+  color: #0056b3;
+  text-decoration: underline;
+}
+
+/* Estilos para el modal de artefactos */
+.artifact-modal .modal-dialog {
+  max-width: 800px;
+}
+
+.artifact-modal .modal-body {
+  max-height: 70vh;
+  overflow-y: auto;
+}
+
+/* Scroll personalizado para el modal */
+.artifact-modal .modal-body::-webkit-scrollbar {
+  width: 8px;
+}
+
+.artifact-modal .modal-body::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 4px;
+}
+
+.artifact-modal .modal-body::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 4px;
+}
+
+.artifact-modal .modal-body::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* Estilos para el toggle de vista */
+.btn-group-sm .btn {
+  font-size: 0.875rem;
+  padding: 0.25rem 0.75rem;
+}
+
+/* Vista de código fuente */
+.artifact-content pre {
+  max-height: 500px;
+  font-size: 0.875rem;
+}
